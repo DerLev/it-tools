@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: CI
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout Repository
+        uses: actions/checkout@v5
       - name: Enable Corepack
         run: corepack enable
       - name: Setup Nodejs Environment
@@ -57,5 +58,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project=${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }} --env=prod
+          command: pages deploy dist --project=${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }} --commit-hash=${{ github.sha }} --branch=${{ github.ref_name }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

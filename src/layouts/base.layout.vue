@@ -66,7 +66,9 @@ const tools = computed<ToolCategory[]>(() => [
             © {{ new Date().getFullYear() }}
             <c-link target="_blank" rel="noopener" href="https://corentin.tech?utm_source=it-tools&utm_medium=footer">
               Corentin Thomasset
-            </c-link> and <c-link target="_blank" rel="noopener" href="https://derlev.xyz/">DerLev</c-link>
+            </c-link> and <c-link target="_blank" rel="noopener" href="https://derlev.xyz/">
+              DerLev
+            </c-link>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const convertedSections = computed(() => {
       value: ipv4ToIpv6({ ip: rawIpAddress.value }),
     },
     {
-      label: 'Ipv6 (short): ',
+      label: 'IPv6 (short): ',
       value: ipv4ToIpv6({ ip: rawIpAddress.value, prefix: '::ffff:' }),
     },
   ];

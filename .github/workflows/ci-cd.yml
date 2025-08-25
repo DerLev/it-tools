@@ -53,6 +53,8 @@ jobs:
         run: pnpm i
       - name: Build the app
         run: pnpm build
+      - name: Apply Cloudflare Pages Config
+        run: cp cloudflare/* dist/
       - name: Deploy Site on Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
